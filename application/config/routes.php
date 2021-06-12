@@ -10,6 +10,7 @@ $route['buku'] = 'Buku/index';
 $route['anggota'] = 'Anggota/index';
 $route['kategori'] = 'Kategori/index';
 $route['penerbit'] = 'Penerbit/index';
+$route['pengarang'] = 'Pengarang/index';
 $route['pengadaan'] = 'Pengadaan/index';
 $route['rak'] = 'Rak/index';
 $route['boq'] = 'Boq/index';

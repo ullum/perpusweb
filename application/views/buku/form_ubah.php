@@ -74,9 +74,33 @@
                             <?php endif; ?>
 
                             <!-- Pengarang -->
+                            <?php if($jmlPenerbit > 0): ?>
                             <div class="form-group"><label>Pengarang</label>
-                                <input class="form-control" name="pengarang" type="text" value="<?= $d->pengarang ?>">
+                                <select name="pengarang" class="form-control chosen" value="<?= $d->id_pengarang ?>">
+                                    <?php foreach($pengarang as $p): ?>
+
+                                    <?php if($d->id_pengarang == $p->id_pengarang): ?>
+                                    <option value="<?= $p->id_pengarang ?>" selected><?= $p->pengarang ?></option>
+                                    <?php else: ?>
+                                    <option value="<?= $p->id_pengarang ?>"><?= $p->pengarang ?></option>
+                                    <?php endif; ?>
+
+                                    <?php endforeach ?>
+                                </select>
                             </div>
+                            <?php else: ?>
+                            <div class="form-group"><label>Pengarang</label>
+                                <input type="hidden" name="pengarang">
+                                <div class="d-sm-flex justify-content-between">
+                                    <span class="text-danger"><i>(Belum Ada Data Penerbit!)</i></span>
+                                    <a href="<?= base_url() ?>pengarang" class="btn btn-sm btn-primary btn-icon-split">
+                                        <span class="icon text-white">
+                                            <i class="fas fa-plus"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <?php endif; ?>
 
                             <!-- ISBN -->
                             <div class="form-group"><label>ISBN</label>

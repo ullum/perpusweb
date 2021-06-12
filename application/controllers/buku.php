@@ -11,6 +11,7 @@ class Buku extends CI_Controller {
 	$this->load->helper('cookie');
 	$this->load->model('kategori_model');
 	$this->load->model('penerbit_model');
+	$this->load->model('pengarang_model');
 	$this->load->model('rak_model');
 	$this->load->model('buku_model');
   }
@@ -54,11 +55,13 @@ class Buku extends CI_Controller {
 		//data untuk select
 		$data['kategori'] = $this->kategori_model->data()->result();
 		$data['penerbit'] = $this->penerbit_model->data()->result();
+		$data['pengarang'] = $this->pengarang_model->data()->result();
 		$data['rak'] = $this->rak_model->data()->result();
 
 		//jml data
 		$data['jmlKategori'] = $this->kategori_model->data()->num_rows();
 		$data['jmlPenerbit'] = $this->penerbit_model->data()->num_rows();
+		$data['jmlPengarang'] = $this->pengarang_model->data()->num_rows();
 		$data['jmlRak'] = $this->rak_model->data()->num_rows();
 		
 
@@ -77,11 +80,13 @@ class Buku extends CI_Controller {
 		//data untuk select
 		$data['kategori'] = $this->kategori_model->data()->result();
 		$data['penerbit'] = $this->penerbit_model->data()->result();
+		$data['pengarang'] = $this->pengarang_model->data()->result();
 		$data['rak'] = $this->rak_model->data()->result();
 
 		//jml data
 		$data['jmlKategori'] = $this->kategori_model->data()->num_rows();
 		$data['jmlPenerbit'] = $this->penerbit_model->data()->num_rows();
+		$data['jmlPengarang'] = $this->pengarang_model->data()->num_rows();
 		$data['jmlRak'] = $this->rak_model->data()->num_rows();
 		
 
@@ -184,7 +189,7 @@ class Buku extends CI_Controller {
 			'id_buku'=>$kode,
 			'id_kategori'=>$kategori,
 			'id_penerbit'=>$penerbit,
-			'pengarang'=>$pengarang,
+			'id_pengarang'=>$pengarang,
 			'id_rak'=>$rak,
 			'judul'=>$buku,
 			'isbn'=>$isbn,
@@ -268,7 +273,7 @@ class Buku extends CI_Controller {
 		$data=array(
 			'id_kategori'=>$kategori,
 			'id_penerbit'=>$penerbit,
-			'pengarang'=>$pengarang,
+			'id_pengarang'=>$pengarang,
 			'id_rak'=>$rak,
 			'judul'=>$buku,
 			'isbn'=>$isbn,

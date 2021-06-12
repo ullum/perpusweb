@@ -35,6 +35,7 @@ class buku_model extends ci_model{
       $this->db->from('buku as b');
       $this->db->join('kategori as k', 'k.id_kategori = b.id_kategori');
       $this->db->join('penerbit as p', 'p.id_penerbit = b.id_penerbit');
+      $this->db->join('pengarang as pg', 'pg.id_pengarang = b.id_pengarang');
       $this->db->join('rak as r', 'r.id_rak = b.id_rak');
 
       $this->db->order_by('b.id_buku','DESC');
@@ -48,6 +49,7 @@ class buku_model extends ci_model{
       $this->db->where('b.id_buku',$where);
       $this->db->join('kategori as k', 'k.id_kategori = b.id_kategori');
       $this->db->join('penerbit as p', 'p.id_penerbit = b.id_penerbit');
+      $this->db->join('pengarang as pg', 'pg.id_pengarang = b.id_pengarang');
       $this->db->join('rak as r', 'r.id_rak = b.id_rak');
 
       

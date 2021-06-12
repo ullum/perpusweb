@@ -27,6 +27,7 @@
                                 <th>Foto</th>
                                 <th>Judul Buku</th>
                                 <th>Penerbit</th>
+                                <th>Pengarang</th>
                                 <th>Stok</th>
                                 <th>Kategori</th>
                                 <th>Rak</th>
@@ -41,6 +42,7 @@
                                         src="assets/upload/buku/<?= $b->foto ?>" alt="" width="75px"></td>
                                 <td onclick="detail('<?= $b->id_buku ?>')"><?= $b->judul ?></td>
                                 <td onclick="detail('<?= $b->id_buku ?>')"><?= $b->penerbit?></td>
+                                <td onclick="detail('<?= $b->id_buku ?>')"><?= $b->pengarang?></td>
                                 <td onclick="detail('<?= $b->id_buku ?>')">
                                 <?php  
 

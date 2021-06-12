@@ -100,6 +100,7 @@
                         <a class="collapse-item active" href="<?= base_url() ?>anggota">Anggota</a>
                         <a class="collapse-item active" href="<?= base_url() ?>kategori">Kategori</a>
                         <a class="collapse-item active" href="<?= base_url() ?>penerbit">Penerbit</a>
+                        <a class="collapse-item active" href="<?= base_url() ?>pengarang">Pengarang</a>
                         <a class="collapse-item active" href="<?= base_url() ?>rak">Rak</a>
                     </div>
 

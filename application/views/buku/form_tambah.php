@@ -61,9 +61,28 @@
                             <?php endif; ?>
 
                             <!-- Pengarang -->
+                            <?php if($jmlPengarang > 0): ?>
                             <div class="form-group"><label>Pengarang</label>
-                                <input class="form-control" name="pengarang" type="text" placeholder="">
+                                <select name="pengarang" class="form-control chosen">
+                                    <option value="">--Pilih--</option>
+                                    <?php foreach($pengarang as $p): ?>
+                                    <option value="<?= $p->id_pengarang ?>"><?= $p->pengarang ?></option>
+                                    <?php endforeach ?>
+                                </select>
                             </div>
+                            <?php else: ?>
+                            <div class="form-group"><label>Pengarang</label>
+                                <input type="hidden" name="pengarang">
+                                <div class="d-sm-flex justify-content-between">
+                                    <span class="text-danger"><i>(Belum Ada Data Penerbit!)</i></span>
+                                    <a href="<?= base_url() ?>pengarang" class="btn btn-sm btn-primary btn-icon-split">
+                                        <span class="icon text-white">
+                                            <i class="fas fa-plus"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <?php endif; ?>
 
                             <!-- ISBN -->
                             <div class="form-group"><label>ISBN</label>
