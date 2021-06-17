@@ -184,7 +184,7 @@ function tgl_indo($tanggal){
                                                     <td><?= $b->id_buku ?></td>
                                                     <td><?= $b->judul ?></td>
                                                     <td><?= $b->isbn ?></td>
-                                                    <td><?= $b->pengarang ?></td>
+                                                    <td><?= $b->id_pengarang ?></td>
                                                     <td><?= $b->qty ?></td>
                                                 </tr>
 
