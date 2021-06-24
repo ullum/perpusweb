@@ -11,6 +11,7 @@ class Peminjaman extends CI_Controller {
 	$this->load->model('anggota_model');
 	$this->load->model('buku_model');
 	$this->load->model('peminjaman_model');
+	$this->load->model('pengarang_model');
   }
 	
 	public function index()

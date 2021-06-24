@@ -184,7 +184,7 @@ function tgl_indo($tanggal){
                                                     <td><?= $b->id_buku ?></td>
                                                     <td><?= $b->judul ?></td>
                                                     <td><?= $b->isbn ?></td>
-                                                    <td><?= $b->id_pengarang ?></td>
+                                                    <td><?= $b->pengarang ?></td>
                                                     <td><?= $b->qty ?></td>
                                                 </tr>
 
@@ -216,7 +216,7 @@ function tgl_indo($tanggal){
 <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
 
 <?php if($this->session->flashdata('Pesan')): ?>
-
+ 
 <?php else: ?>
 <script>
 $(document).ready(function() {

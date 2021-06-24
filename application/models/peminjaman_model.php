@@ -37,7 +37,7 @@ class peminjaman_model extends ci_model{
       $this->db->from('p_buku as p');
       $this->db->join('buku as b', 'b.id_buku = p.id_buku');
       $this->db->join('penerbit as pnb', 'pnb.id_penerbit = b.id_penerbit');
-      $this->db->join('penerbit as pg', 'pg.id_pengarang = b.id_pengarang');
+      // $this->db->join('penerbit as pg', 'pg.id_pengarang = b.id_pengarang');
 		  $this->db->group_by('p.id_buku');
       $this->db->limit(3);
       $this->db->order_by('total','DESC');
@@ -73,7 +73,7 @@ class peminjaman_model extends ci_model{
       $this->db->select('*');
       $this->db->from('peminjaman as p');
       $this->db->join('anggota as a', 'a.id_anggota = p.id_anggota');
-
+ 
       $this->db->where('p.tgl_pinjam >=', $tglAwal);
       $this->db->where('p.tgl_pinjam <=', $tglAkhir);
       return $query = $this->db->get();
