@@ -90,36 +90,6 @@
 
     <div class="row">
 
-        <!-- Area Chart -->
-        <div class="col-xl-12 col-lg-12">
-            <div class="card shadow mb-4" id="grafik">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-primary">
-                    <h6 class="m-0 font-weight-bold border-0 text-white">Statistik Peminjaman</h6>
-                    
-                    <div class="col-lg-2">
-                        <select name="tahun" id="tahun" class="form-control" onchange="filterTahun()">
-                            <option value="<?= $yearnow ?>"><?= $yearnow ?></option>
-                            <option value="<?= $previousyear ?>"><?= $previousyear ?></option>
-                            <option value="<?= $twoyearago ?>"><?= $twoyearago ?></option>
-                        </select>
-                    </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="chart-area" id="chart">
-                        <canvas id="myAreaChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-
-    <div class="row">
-
     <div class="col-xl-6 col-md-6 mb-4" id="top3">
         <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-danger">
@@ -230,26 +200,26 @@
 
 <?php else: ?>
 <script>
-$(document).ready(function() {
-    let timerInterval
-    Swal.fire({
-        title: 'Memuat...',
-        timer: 1000,
-        onBeforeOpen: () => {
-            Swal.showLoading()
-        },
-        onClose: () => {
-            clearInterval(timerInterval)
-        }
-    }).then((result) => {
-        $("#anggota").addClass("bounceIn");
-        $("#buku").addClass("bounceIn");
-        $("#pengadaan").addClass("bounceIn");
-        $("#pinjam").addClass("bounceIn");
-        $("#grafik").addClass("bounceIn");
-        $("#top3").addClass("bounceIn");
-        $("#top3anggota").addClass("bounceIn");
-    })
-});
+// $(document).ready(function() {
+//     let timerInterval
+//     Swal.fire({
+//         title: 'Memuat...',
+//         timer: 1000,
+//         onBeforeOpen: () => {
+//             Swal.showLoading()
+//         },
+//         onClose: () => {
+//             clearInterval(timerInterval)
+//         }
+//     }).then((result) => {
+//         $("#anggota").addClass("bounceIn");
+//         $("#buku").addClass("bounceIn");
+//         $("#pengadaan").addClass("bounceIn");
+//         $("#pinjam").addClass("bounceIn");
+//         $("#grafik").addClass("bounceIn");
+//         $("#top3").addClass("bounceIn");
+//         $("#top3anggota").addClass("bounceIn");
+//     })
+// });
 </script>
 <?php endif; ?>

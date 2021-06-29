@@ -151,21 +151,21 @@
 
 <?php else: ?>
 <script>
-$(document).ready(function() {
+// $(document).ready(function() {
 
-    let timerInterval
-    Swal.fire({
-        title: 'Memuat...',
-        timer: 1000,
-        onBeforeOpen: () => {
-            Swal.showLoading()
-        },
-        onClose: () => {
-            clearInterval(timerInterval)
-        }
-    }).then((result) => {
+//     let timerInterval
+//     Swal.fire({
+//         title: 'Memuat...',
+//         timer: 1000,
+//         onBeforeOpen: () => {
+//             Swal.showLoading()
+//         },
+//         onClose: () => {
+//             clearInterval(timerInterval)
+//         }
+//     }).then((result) => {
 
-    })
-});
+//     })
+// });
 </script>
 <?php endif; ?>
