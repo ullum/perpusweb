@@ -216,6 +216,7 @@ function tgl_indo($tanggal)
 
 <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
 
+
 <?php if ($this->session->flashdata('Pesan')) : ?>
 
 <?php else : ?>
@@ -237,4 +238,5 @@ function tgl_indo($tanggal)
         //     })
         // });
     </script>
+
 <?php endif; ?>

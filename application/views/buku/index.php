@@ -92,6 +92,7 @@
 <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/buku.js"></script>
 <script src="<?= base_url(); ?>assets/js/loading.js"></script>
+
 <?php if ($this->session->flashdata('Pesan')) : ?>
     <?= $this->session->flashdata('Pesan'); ?>
 <?php else : ?>
@@ -113,4 +114,5 @@
         //     })
         // });
     </script>
+
 <?php endif; ?>

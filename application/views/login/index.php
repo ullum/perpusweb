@@ -104,5 +104,9 @@
 //         $("#card").addClass("bounceIn");
 //     })
 // });
+
+// </script>
+
 </script>
+
 <?php endif; ?>
