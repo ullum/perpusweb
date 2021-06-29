@@ -230,26 +230,26 @@
 
 <?php else: ?>
 <script>
-$(document).ready(function() {
-    let timerInterval
-    Swal.fire({
-        title: 'Memuat...',
-        timer: 1000,
-        onBeforeOpen: () => {
-            Swal.showLoading()
-        },
-        onClose: () => {
-            clearInterval(timerInterval)
-        }
-    }).then((result) => {
-        $("#anggota").addClass("bounceIn");
-        $("#buku").addClass("bounceIn");
-        $("#pengadaan").addClass("bounceIn");
-        $("#pinjam").addClass("bounceIn");
-        $("#grafik").addClass("bounceIn");
-        $("#top3").addClass("bounceIn");
-        $("#top3anggota").addClass("bounceIn");
-    })
-});
+// $(document).ready(function() {
+//     let timerInterval
+//     Swal.fire({
+//         title: 'Memuat...',
+//         timer: 1000,
+//         onBeforeOpen: () => {
+//             Swal.showLoading()
+//         },
+//         onClose: () => {
+//             clearInterval(timerInterval)
+//         }
+//     }).then((result) => {
+//         $("#anggota").addClass("bounceIn");
+//         $("#buku").addClass("bounceIn");
+//         $("#pengadaan").addClass("bounceIn");
+//         $("#pinjam").addClass("bounceIn");
+//         $("#grafik").addClass("bounceIn");
+//         $("#top3").addClass("bounceIn");
+//         $("#top3anggota").addClass("bounceIn");
+//     })
+// });
 </script>
 <?php endif; ?>
