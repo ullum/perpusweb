@@ -149,5 +149,7 @@ $('.chosen').chosen({
 
 //     })
 // });
+
 // </script>
+</script>
 <?php endif; ?>

@@ -72,7 +72,7 @@ class peminjaman_model extends ci_model{
       $this->db->select('*');
       $this->db->from('peminjaman as p');
       $this->db->join('anggota as a', 'a.id_anggota = p.id_anggota');
-
+ 
       $this->db->where('p.tgl_pinjam >=', $tglAwal);
       $this->db->where('p.tgl_pinjam <=', $tglAkhir);
       return $query = $this->db->get();

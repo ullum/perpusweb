@@ -28,7 +28,7 @@ class buku_model extends ci_model{
       $stok = $data->jmlbuku;
       return $stok;
     }
-
+ 
     public function dataJoin()
     {
       $this->db->select('*');

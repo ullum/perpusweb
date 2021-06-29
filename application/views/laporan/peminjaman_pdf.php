@@ -41,7 +41,7 @@ function tgl_indo($tanggal){
     }
 
     #customers td {
-        border: 0px solid $#ddd;
+        border: 0px solid #ddd;
         padding: 8px;
         font-size: 12px;
     }
